@@ -59,19 +59,60 @@ export function HeroSection() {
           GitMesh Enterprise Edition
         </h2>
 
-        <p className="mt-12 max-w-md font-mono text-sm text-muted-foreground leading-relaxed">
-          Alveoli correlates market signals with engineering telemetry to auto-generate ranked backlogs, sprint plans,
-          and work routing—fully synced across your dev stack.
-        </p>
+        <div className="mt-12 flex flex-col md:flex-row items-start gap-6">
+          <p className="max-w-md md:w-1/2 font-mono text-sm text-muted-foreground leading-relaxed">
+            GitMesh Enterprise Edition adds a capacity-aware intelligence layer that correlates those signals with your product surface, roadmap constraints, and team capacity to produce capacity-constrained, ranked backlogs and executable GitHub issues with persistent decision rationale, approval workflows, and audit logs. Leaders interact through an agentic interface with role-based controls to propose, evaluate, and approve prioritization and sprint changes—turning visibility into velocity.
+          </p>
+
+            <>
+              <style>{`
+                @media (max-width:1299px) {
+                  .hide-below-1300{display:none !important;}
+                  .show-below-1300{display:flex !important;}
+                }
+                @media (min-width:1300px) {
+                  .hide-below-1300{display:block !important;}
+                  .show-below-1300{display:none !important;}
+                }
+              `}</style>
+
+              {/* Large embedded demo for widths >= 1300px */}
+              <div className="hidden md:block absolute right-2 bottom-22 z-20 w-[650px] hide-below-1300">
+                <div className="relative pt-[56.25%] w-full rounded overflow-hidden bg-black/5 border border-border shadow-lg">
+                  <iframe
+                    className="absolute inset-0 w-full h-full"
+                    src="https://www.youtube.com/embed/0EUWYmeCjWM"
+                    title="GitMesh Enterprise Overview"
+                    frameBorder="0"
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                    allowFullScreen
+                    loading="lazy"
+                  />
+                </div>
+              </div>
+
+              {/* Small "View Demo" button for widths < 1300px */}
+              <div className="show-below-1300">
+                <a
+                  href="https://youtu.be/0EUWYmeCjWM"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="inline-flex items-center px-3 py-2 border border-foreground/20 rounded font-mono text-xs uppercase tracking-widest text-foreground bg-background hover:bg-accent transition"
+                >
+                  View Demo
+                </a>
+              </div>
+            </>
+        </div>
 
         <div className="mt-16 flex items-center gap-8">
           <a
-            href="https://github.com/LF-Decentralized-Trust-labs/gitmesh"
+            href="https://forms.gle/5XHJjQ4Cg4vZm43o9"
             target="_blank"
             rel="noopener noreferrer"
             className="group inline-flex items-center gap-3 border border-foreground/20 px-6 py-3 font-mono text-xs uppercase tracking-widest text-foreground hover:border-accent hover:text-accent transition-all duration-200"
           >
-            <ScrambleTextOnHover text="View Codebase" as="span" duration={0.6} />
+            <ScrambleTextOnHover text="Early Access" as="span" duration={0.6} />
             <BitmapChevron className="transition-transform duration-[400ms] ease-in-out group-hover:rotate-45" />
           </a>
           <a
